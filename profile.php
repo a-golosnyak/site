@@ -13,8 +13,9 @@
     $text = preg_replace('/\s\s+/', ' ', $text);
 
     if ($result->num_rows)
-         queryMysql("UPDATE profiles SET text='$text' where user='$user'");
-    else queryMysql("INSERT INTO profiles VALUES('$user', '$text')");
+      queryMysql("UPDATE profiles SET text='$text' where user='$user'");
+    else 
+      queryMysql("INSERT INTO profiles VALUES('$user', '$text')");
   }
   else
   {
@@ -23,7 +24,8 @@
       $row  = $result->fetch_array(MYSQLI_ASSOC);
       $text = stripslashes($row['text']);
     }
-    else $text = "";
+    else 
+      $text = "";
   }
 
   $text = stripslashes(preg_replace('/\s\s+/', ' ', $text));

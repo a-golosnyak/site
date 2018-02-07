@@ -14,3 +14,16 @@
            "This username is available</span>";
   }
 ?>
+
+//  
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    ... Content ...
+  </body>
+</html>

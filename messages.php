@@ -1,10 +1,13 @@
 <?php // Example 26-11: messages.php
   require_once 'header.php';
 
-  if (!$loggedin) die();
+  if (!$loggedin) 
+    die();
 
-  if (isset($_GET['view'])) $view = sanitizeString($_GET['view']);
-  else                      $view = $user;
+  if (isset($_GET['view'])) 
+    $view = sanitizeString($_GET['view']);
+  else                      
+    $view = $user;
 
   if (isset($_POST['text']))
   {

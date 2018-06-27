@@ -1,9 +1,9 @@
 <?php // Example 26-1: functions.php
   $dbhost  = 'localhost';    // Unlikely to require changing
-  $dbname  = 'MyBlog';   // Modify these...
+  $dbname  = 'site_db';   // Modify these...
   $dbuser  = 'root';   // ...variables according
   $dbpass  = '';   // ...to your installation
-  $appname = "MyBlog"; // ...and preference
+  $appname = "TestSite"; // ...and preference
 
   $connection = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
   if ($connection->connect_error) die($connection->connect_error);

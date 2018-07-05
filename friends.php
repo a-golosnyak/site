@@ -3,10 +3,8 @@
 
   if (!$loggedin) die();
 
-  if (isset($_GET['view'])) 
-    $view = sanitizeString($_GET['view']);
-  else                     
-    $view = $user;
+  if (isset($_GET['view'])) $view = sanitizeString($_GET['view']);
+  else                      $view = $user;
 
   if ($view == $user)
   {
@@ -78,8 +76,7 @@
     $friends = TRUE;
   }
 
-  if (!$friends) 
-    echo "<br>You don't have any friends yet.<br><br>";
+  if (!$friends) echo "<br>You don't have any friends yet.<br><br>";
 
   echo "<a class='button' href='messages.php?view=$view'>" .
        "View $name2 messages</a>";

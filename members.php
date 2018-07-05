@@ -54,20 +54,13 @@
       user='$user' AND friend='" . $row['user'] . "'");
     $t2      = $result1->num_rows;
 
-    if (($t1 + $t2) > 1) 
-      echo " &harr; is a mutual friend";
-    elseif ($t1)         
-      echo " &larr; you are following";
-    elseif ($t2)      
-    {
-      echo " &rarr; is following you";
-      $follow = "recip";
-    }
+    if (($t1 + $t2) > 1) echo " &harr; is a mutual friend";
+    elseif ($t1)         echo " &larr; you are following";
+    elseif ($t2)       { echo " &rarr; is following you";
+      $follow = "recip"; }
     
-    if (!$t1) 
-      echo " [<a href='members.php?add="   .$row['user'] . "'>$follow</a>]";
-    else
-      echo " [<a href='members.php?remove=".$row['user'] . "'>drop</a>]";
+    if (!$t1) echo " [<a href='members.php?add="   .$row['user'] . "'>$follow</a>]";
+    else      echo " [<a href='members.php?remove=".$row['user'] . "'>drop</a>]";
   }
 ?>
 

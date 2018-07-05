@@ -1,9 +1,9 @@
 <?php // Example 26-1: functions.php
   $dbhost  = 'localhost';    // Unlikely to require changing
-  $dbname  = 'site_db';   // Modify these...
-  $dbuser  = 'root';   // ...variables according
-  $dbpass  = '';   // ...to your installation
-  $appname = "TestSite"; // ...and preference
+  $dbname  = 'robinsnest';   // Modify these...
+  $dbuser  = 'robinsnest';   // ...variables according
+  $dbpass  = 'rnpassword';   // ...to your installation
+  $appname = "Robin's Nest"; // ...and preference
 
   $connection = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
   if ($connection->connect_error) die($connection->connect_error);
@@ -18,8 +18,7 @@
   {
     global $connection;
     $result = $connection->query($query);
-    if (!$result) 
-    	die($connection->error);
+    if (!$result) die($connection->error);
     return $result;
   }
 
